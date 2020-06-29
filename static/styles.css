@@ -127,7 +127,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Open Sans", sans-serif;
-  background-image: url("https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png");
+  background-image: url("https://images.wallpaperscraft.com/image/nebula_starry_sky_stars_175574_1366x768.jpg");
   color: #fff;
   font-size: 18px;
   text-align: center;
@@ -135,7 +135,7 @@ body {
 }
 .login {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   margin: -150px 0 0 -150px;
   width: 400px;
@@ -152,7 +152,7 @@ body {
 input {
   width: 100%;
   margin-bottom: 10px;
-  background: rgba(0, 0, 0, 0.3);
+  background: #fff;
   border: none;
   outline: none;
   padding: 10px;
@@ -169,17 +169,21 @@ input {
   -ms-transition: box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease;
 }
+input:focus {
+  box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4),
+    0 1px 1px rgba(255, 255, 255, 0.2);
+}
 
 select {
   width: 100%;
   margin-bottom: 10px;
-  background: rgba(0, 0, 0, 0.3);
+  background: #fff;
   border: none;
   outline: none;
   padding: 10px;
   font-size: 13px;
   color: gray;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 1px #fff;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2),
@@ -189,14 +193,4 @@ select {
   -o-transition: box-shadow 0.5s ease;
   -ms-transition: box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease;
-}
-
-input:focus {
-  box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4),
-    0 1px 1px rgba(255, 255, 255, 0.2);
-}
-
-select:focus {
-  box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4),
-    0 1px 1px rgba(255, 255, 255, 0.2);
 }
