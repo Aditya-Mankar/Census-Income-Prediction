@@ -17,8 +17,9 @@
     <h1>Census Income Predictor</h1>
 
     <form action="{{ url_for('predict')}}" method="post">
-      <input type="text" name="Age" placeholder="Age" required="required" />
-      <input type="text" name="Years of Education" placeholder="Years of Education" required="required" />
+      <input type="text" name="Age" placeholder="Age" required="required" pattern="\d*" title="Numbers only, please." />
+      <input type="text" name="Years of Education" placeholder="Years of Education" required="required" pattern="\d*" title="Numbers only, please." />
+      
       <select type="text" name="Marital Status" placeholder="Marital Status" required="required">
         <option value="none">Marital Status</option>
         <option value="Married">Married</option>
@@ -28,10 +29,10 @@
         <option value="Widowed">Widowed</option>
         <option value="Married-spouse-absent">Married-spouse-absent</option>
         <option value="Married-AF-spouse">Married-AF-spouse</option>
-
       </select>
-      <input type="text" name="Occupation Code" placeholder="Occupation Code" required="required" />
-      <input type="text" name="Hours of work per week" placeholder="Hours of work per week" required="required" />
+
+      <input type="text" name="Occupation Code" placeholder="Occupation Code [range = 1 to 20]" required="required" pattern="\d*" title="Numbers only, please. [range = 1 to 20]" />
+      <input type="text" name="Hours of work per week" placeholder="Hours of work per week" required="required" pattern="\d*" title="Numbers only, please." />
 
       <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
