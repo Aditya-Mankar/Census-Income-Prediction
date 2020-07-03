@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Census Income Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+  <div class="login">
+    <h1>Census Income Predictor</h1>
+
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="Age" placeholder="Age" required="required" pattern="\d*" title="Numbers only, please." />
+      <input type="text" name="Years of Education" placeholder="Years of Education" required="required" pattern="\d*" title="Numbers only, please." />
+      
+      <select type="text" name="Marital Status" placeholder="Marital Status" required="required">
+        <option value="Never-married">Never-married</option>
+        <option value="Married">Married</option>
+        <option value="Divorced">Divorced</option>
+        <option value="Separated">Separated</option>
+        <option value="Widowed">Widowed</option>
+        <option value="Married-spouse-absent">Married-spouse-absent</option>
+        <option value="Married-AF-spouse">Married-AF-spouse</option>
+      </select>
+
+      <input type="text" name="Occupation Code" placeholder="Occupation Code [range = 1 to 20]" required="required" pattern="\d*" title="Numbers only, please. [range = 1 to 20]" />
+      <input type="text" name="Hours of work per week" placeholder="Hours of work per week" required="required" pattern="\d*" title="Numbers only, please." />
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <br>
+    <h2> {{ prediction_text }} </h2>
+
+  </div>
+
+</body>
+
+</html>
